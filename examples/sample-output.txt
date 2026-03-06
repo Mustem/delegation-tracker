@@ -1,0 +1,15 @@
+=== Delegation Tracker Summary ===
+
+Total delegated amount: 611.0
+
+By validator:
+- validator-alpha: 240.5
+- validator-beta: 320.5
+- validator-gamma: 50.0
+
+Recent records:
+- 2026-02-12 | validator-beta | 200.0 | added stake
+- 2026-02-15 | validator-alpha | 75.0 | top up
+- 2026-02-20 | validator-gamma | 50.0 | test delegation
+- 2026-02-22 | validator-beta | 120.5 | reward redelegation
+- 2026-02-25 | validator-alpha | 40.0 | small add
