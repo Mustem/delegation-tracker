@@ -1,8 +1,14 @@
 import csv
+import os
+import sys
 from collections import defaultdict
 from datetime import datetime
 
 CSV_PATH = "data/delegations.csv"
+
+if not os.path.exists(CSV_PATH):
+    print(f"CSV file not found: {CSV_PATH}")
+    sys.exit(1)
 
 total_amount = 0.0
 validator_totals = defaultdict(float)
