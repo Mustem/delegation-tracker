@@ -7,6 +7,7 @@ A simple Python tool to track delegation records from a CSV file.
 - Reads delegation records from CSV
 - Calculates total delegated amount
 - Summarizes totals by validator
+- Sorts records by date
 - Shows recent records
 - Easy to run in WSL or Ubuntu
 
@@ -29,6 +30,6 @@ python3 src/tracker.py
 
 ## Roadmap
 
-- Add sorting by date
 - Add CSV path argument
 - Add exportable summary output
+- Add validator filtering

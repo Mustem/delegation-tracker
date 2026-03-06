@@ -1,5 +1,6 @@
 import csv
 from collections import defaultdict
+from datetime import datetime
 
 CSV_PATH = "data/delegations.csv"
 
@@ -14,6 +15,8 @@ with open(CSV_PATH, newline="", encoding="utf-8") as f:
         total_amount += amount
         validator_totals[row["validator"]] += amount
         rows.append(row)
+
+rows.sort(key=lambda r: datetime.strptime(r["date"], "%Y-%m-%d"))
 
 print("=== Delegation Tracker Summary ===")
 print()
