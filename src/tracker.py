@@ -4,10 +4,11 @@ import sys
 from collections import defaultdict
 from datetime import datetime
 
-CSV_PATH = "data/delegations.csv"
+CSV_PATH = sys.argv[1] if len(sys.argv) > 1 else "data/delegations.csv"
 
 if not os.path.exists(CSV_PATH):
     print(f"CSV file not found: {CSV_PATH}")
+    print("Usage: python3 src/tracker.py [csv_path]")
     sys.exit(1)
 
 total_amount = 0.0
@@ -27,6 +28,7 @@ rows.sort(key=lambda r: datetime.strptime(r["date"], "%Y-%m-%d"))
 print("=== Delegation Tracker Summary ===")
 print()
 
+print(f"Source CSV: {CSV_PATH}")
 print(f"Total delegated amount: {total_amount}")
 print()
 

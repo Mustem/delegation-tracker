@@ -10,6 +10,7 @@ A simple Python tool to track delegation records from a CSV file.
 - Sorts records by date
 - Shows recent records
 - Handles missing CSV input gracefully
+- Supports custom CSV path input
 - Easy to run in WSL or Ubuntu
 
 ## Structure
@@ -26,12 +27,14 @@ Reads a CSV file with delegation records and prints a summary.
 
 ## Usage
 
-Run:
+Run with default sample data:
 python3 src/tracker.py
+
+Run with a custom CSV path:
+python3 src/tracker.py data/delegations.csv
 
 ## Roadmap
 
-- Add CSV path argument
 - Add exportable summary output
 - Add validator filtering
 - Add summary by date range
